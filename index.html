@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web-programozás 1 beadandó</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-overlay">
+            <h1>Web programozás-1 Előadás Házi feladat</h1>
+            <p class="subtitle">Magyarországi foglalkoztatási és lakossági statisztikai webalkalmazás</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Főoldal</a></li>
+            <li><a href="javascript.html">JavaScript CRUD</a></li>
+            <li><a href="react.html">React CRUD</a></li>
+            <li><a href="spa.html">SPA</a></li>
+            <li><a href="fetchapi.html">Fetch API</a></li>
+            <li><a href="axios.html">Axios</a></li>
+            <li><a href="oojs.html">OOJS</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="hero-section">
+            <div class="hero-text">
+                <h2>Projektbemutató</h2>
+                <p>
+                    Ez a webalkalmazás magyarországi régiók, megyék, lakossági adatok és
+                    foglalkoztatási statisztikák kezelésére készült. A projekt célja, hogy
+                    többféle webfejlesztési technológiát egy közös témán keresztül mutasson be.
+                </p>
+                <p>
+                    Az alkalmazás külön oldalakra bontva szemlélteti a JavaScript CRUD,
+                    React CRUD, SPA, Fetch API, Axios és objektumorientált JavaScript
+                    megoldásokat.
+                </p>
+                <div class="hero-buttons">
+                    <a class="btn btn-primary" href="javascript.html">JavaScript CRUD megnyitása</a>
+                    <a class="btn btn-secondary" href="fetchapi.html">Fetch API megnyitása</a>
+                </div>
+            </div>
+
+            <div class="hero-info">
+                <div class="info-box">
+                    <h3>Projekt célja</h3>
+                    <p>
+                        Egy egységes témára épülő beadandó elkészítése, amely a tárgyban tanult
+                        kliens- és szerveroldali technológiákat is bemutatja.
+                    </p>
+                </div>
+                <div class="info-box">
+                    <h3>Adatfókusz</h3>
+                    <p>
+                        Régiók, megyék, lakosságszám és foglalkoztatási adatok elemzése,
+                        megjelenítése és kezelése.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Főbb statisztikai adatok</h2>
+            <p>A projekt alapját valós, táblázatos formában megadott magyarországi regionális, megyei, lakossági és foglalkoztatási adatok adják.</p>
+            <div class="cards stats-grid">
+                <article class="card stat-card">
+                    <h3>Régiók száma</h3>
+                    <p class="stat-number">7</p>
+                    <p>A forrásadatok 7 magyarországi régiót tartalmaznak.</p>
+                </article>
+                <article class="card stat-card">
+                    <h3>Megyék száma</h3>
+                    <p class="stat-number">20</p>
+                    <p>A projekt 20 megye adataival dolgozik Budapesttel együtt.</p>
+                </article>
+                <article class="card stat-card">
+                    <h3>Összes lakosság</h3>
+                    <p class="stat-number">10 090 330</p>
+                    <p>A betöltött lakossági adatok összege.</p>
+                </article>
+                <article class="card stat-card">
+                    <h3>Foglalkoztatási rekordok</h3>
+                    <p class="stat-number">20</p>
+                    <p>Minden megyéhez külön foglalkoztatási rekord tartozik.</p>
+                </article>
+            </div>
+        </section>
+
+        <section>
+            <h2>Az alkalmazás menüpontjai</h2>
+            <div class="feature-grid">
+                <article class="feature-card"><h3>JavaScript CRUD</h3><p>Tömbben tárolt megyei adatok kezelése.</p></article>
+                <article class="feature-card"><h3>React CRUD</h3><p>Régiók kezelése React állapotkezeléssel.</p></article>
+                <article class="feature-card"><h3>SPA</h3><p>Két kisebb React alkalmazás egyoldalas megoldásban.</p></article>
+                <article class="feature-card"><h3>Fetch API</h3><p>Adatbázisban tárolt foglalkoztatási rekordok kezelése JavaScript és Fetch API segítségével.</p></article>
+                <article class="feature-card"><h3>Axios</h3><p>React alapú CRUD felület szerveroldali adatbázissal és Axios kommunikációval.</p></article>
+                <article class="feature-card"><h3>OOJS</h3><p>Objektumorientált JavaScript grafikus megoldás osztályokkal és öröklődéssel.</p></article>
+            </div>
+        </section>
+
+        <section class="two-column">
+            <div>
+                <h2>Felhasznált adatforrások</h2>
+                <ul class="styled-list">
+                    <li><strong>regiok.txt</strong> – régiók törzsadatai</li>
+                    <li><strong>megyek.txt</strong> – megyék és régiókapcsolatok</li>
+                    <li><strong>lakosok.txt</strong> – lakossági adatok</li>
+                    <li><strong>foglalkozasok.txt</strong> – foglalkoztatási adatok</li>
+                </ul>
+            </div>
+            <div>
+                <h2>Felhasznált technológiák</h2>
+                <ul class="styled-list">
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>JavaScript</li>
+                    <li>React</li>
+                    <li>Fetch API</li>
+                    <li>Axios</li>
+                    <li>PHP</li>
+                    <li>MySQL</li>
+                    <li>GitHub</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Miért ezt a témát választottuk?</h2>
+            <p>A régiókhoz, megyékhez, lakossághoz és foglalkoztatáshoz kapcsolódó adatok jól strukturáltak, könnyen relációs adatbázisba szervezhetők, és alkalmasak arra, hogy a beadandó minden részfeladatát ugyanarra a témára építsük fel.</p>
+            <p>Ez azért előnyös, mert az egész projekt egységes marad, a dokumentáció átláthatóbb lesz, és minden menüpont ugyanazt az adatvilágot dolgozza fel más technológiai megközelítéssel.</p>
+        </section>
+    </main>
+
+    <footer>Készítette: SAJÁT NÉV – NEPTUNKÓD | <span id="current-year"></span></footer>
+    <script src="assets/js/common.js"></script>
+</body>
+</html>

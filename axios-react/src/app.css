@@ -1,0 +1,23 @@
+.axios-wrapper { width: 100%; }
+.axios-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 24px; }
+.axios-card { background: #f8fafc; border: 1px solid #dbeafe; border-radius: 14px; padding: 20px; }
+.axios-card h3 { margin-bottom: 16px; color: #1d4ed8; }
+.axios-form { display: grid; gap: 12px; }
+.axios-form input, .axios-form select { padding: 10px 12px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 1rem; }
+.axios-button-group { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; margin-top: 14px; }
+.axios-button-group button { padding: 10px 12px; border: none; border-radius: 8px; background: #2563eb; color: white; cursor: pointer; margin-right: 0; margin-bottom: 0; min-width: 120px; }
+.axios-button-group button:hover { background: #1d4ed8; }
+.axios-button-group--compact { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
+.axios-button-group--compact button { min-width: 110px; }
+.axios-message { margin-top: 16px; padding: 12px; border-radius: 8px; background: #dcfce7; color: #166534; }
+.axios-error { background: #fee2e2; color: #991b1b; }
+.axios-table-wrapper { overflow-x: auto; }
+.axios-table-wrapper table { width: 100%; border-collapse: separate; border-spacing: 0; margin-top: 8px; }
+.axios-table-wrapper th, .axios-table-wrapper td { border: 1px solid #d1d5db; padding: 10px; text-align: left; vertical-align: top; }
+.axios-table-wrapper th { background: #dbeafe; }
+.axios-summary { margin-top: 16px; }
+@media (max-width: 900px) { .axios-grid { grid-template-columns: 1fr; } }
+@media (max-width: 600px) {
+  .axios-button-group, .axios-button-group--compact { flex-direction: column; align-items: stretch; gap: 12px; }
+  .axios-button-group button, .axios-button-group--compact button { width: 100%; min-width: 0; }
+}

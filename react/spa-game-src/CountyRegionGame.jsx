@@ -1,0 +1,81 @@
+import { useMemo, useState } from "react";
+
+const questions = [
+    { county: "Budapest", options: ["Közép-Magyarország", "Dél-Alföld", "Nyugat-Dunántúl"], answer: "Közép-Magyarország" },
+    { county: "Baranya", options: ["Dél-Dunántúl", "Észak-Magyarország", "Közép-Dunántúl"], answer: "Dél-Dunántúl" },
+    { county: "Pest", options: ["Közép-Magyarország", "Észak-Alföld", "Nyugat-Dunántúl"], answer: "Közép-Magyarország" },
+    { county: "Zala", options: ["Nyugat-Dunántúl", "Dél-Alföld", "Észak-Magyarország"], answer: "Nyugat-Dunántúl" },
+    { county: "Békés", options: ["Dél-Alföld", "Közép-Dunántúl", "Észak-Alföld"], answer: "Dél-Alföld" }
+];
+
+function CountyRegionGame() {
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const [selectedOption, setSelectedOption] = useState("");
+    const [feedback, setFeedback] = useState("");
+    const [score, setScore] = useState(0);
+    const [answered, setAnswered] = useState(false);
+    const [finished, setFinished] = useState(false);
+
+    const currentQuestion = useMemo(() => questions[currentIndex], [currentIndex]);
+
+    const handleCheck = () => {
+        if (!selectedOption || answered) return;
+        if (selectedOption === currentQuestion.answer) {
+            setFeedback("Helyes válasz!");
+            setScore((prev) => prev + 1);
+        } else {
+            setFeedback(`Nem jó. A helyes válasz: ${currentQuestion.answer}`);
+        }
+        setAnswered(true);
+    };
+
+    const handleNext = () => {
+        setSelectedOption("");
+        setFeedback("");
+        setAnswered(false);
+        if (currentIndex < questions.length - 1) setCurrentIndex((prev) => prev + 1);
+        else setFinished(true);
+    };
+
+    const handleRestart = () => {
+        setCurrentIndex(0); setSelectedOption(""); setFeedback(""); setScore(0); setAnswered(false); setFinished(false);
+    };
+
+    if (finished) {
+        return (
+            <div className="miniapp-card">
+                <h3>Megye–régió játék</h3>
+                <div className="result-box">
+                    <p>A játék véget ért. Elért pontszám: <strong>{score}</strong> / {questions.length}</p>
+                    <button type="button" onClick={handleRestart}>Újraindítás</button>
+                </div>
+            </div>
+        );
+    }
+
+    return (
+        <div className="miniapp-card">
+            <h3>Megye–régió párosító játék</h3>
+            <p>Válaszd ki, hogy az adott megye melyik régióhoz tartozik.</p>
+            <div className="quiz-box">
+                <p><strong>{currentIndex + 1}. kérdés:</strong> {currentQuestion.county}</p>
+                <div className="option-list">
+                    {currentQuestion.options.map((option) => (
+                        <label key={option} className="option-item">
+                            <input type="radio" name="region-option" value={option} checked={selectedOption === option} onChange={(event) => setSelectedOption(event.target.value)} />
+                            <span>{option}</span>
+                        </label>
+                    ))}
+                </div>
+                <div className="miniapp-button-group">
+                    <button type="button" onClick={handleCheck}>Ellenőrzés</button>
+                    <button type="button" onClick={handleNext}>Következő</button>
+                </div>
+                {feedback && <div className="result-box">{feedback}</div>}
+                <p className="score-text">Jelenlegi pontszám: <strong>{score}</strong></p>
+            </div>
+        </div>
+    );
+}
+
+export default CountyRegionGame;

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch API CRUD</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+    <header class="site-header"><div class="header-overlay"><h1>Web programozás-1 Előadás Házi feladat</h1><p class="subtitle">Fetch API CRUD – Foglalkoztatási adatok kezelése adatbázisból</p></div></header>
+    <nav><ul>
+        <li><a href="index.html">Főoldal</a></li><li><a href="javascript.html">JavaScript CRUD</a></li><li><a href="react.html">React CRUD</a></li><li><a href="spa.html">SPA</a></li><li><a href="fetchapi.html">Fetch API</a></li><li><a href="axios.html">Axios</a></li><li><a href="oojs.html">OOJS</a></li>
+    </ul></nav>
+    <main>
+        <section>
+            <h2>Foglalkoztatási adatok CRUD kezelése</h2>
+            <p>Ezen az oldalon a foglalkoztatási adatok szerveroldali adatbázisból kerülnek betöltésre, és a műveletek JavaScript Fetch API segítségével történnek.</p>
+            <p>Az <strong>fkod</strong> technikai azonosító, ezért a felületen nem jelenítjük meg külön szerkeszthető mezőként. Az adatbázis automatikusan kezeli.</p>
+        </section>
+        <section>
+            <h2>Új rekord felvétele / rekord módosítása</h2>
+            <form id="employment-form">
+                <input type="hidden" id="fkod">
+                <label for="megyekod">Megye</label>
+                <select id="megyekod" required>
+                    <option value="">Válassz megyét...</option>
+                </select>
+                <label for="mezogazdasag">Mezőgazdaság</label><input type="number" id="mezogazdasag" min="0" required>
+                <label for="ipar">Ipar</label><input type="number" id="ipar" min="0" required>
+                <label for="szolgaltatas">Szolgáltatás</label><input type="number" id="szolgaltatas" min="0" required>
+                <div class="button-group"><button type="submit">Mentés</button><button type="button" id="reset-btn">Mégsem</button></div>
+            </form>
+            <div id="message-box"></div>
+        </section>
+        <section>
+            <h2>Adatbázisban tárolt rekordok</h2>
+            <div class="table-wrapper">
+                <table>
+                    <thead><tr><th>Megye</th><th>Mezőgazdaság</th><th>Ipar</th><th>Szolgáltatás</th><th>Összesen</th><th>Műveletek</th></tr></thead>
+                    <tbody id="employment-table-body"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <footer>Készítette: SAJÁT NÉV – NEPTUNKÓD | <span id="current-year"></span></footer>
+    <script src="assets/js/common.js"></script>
+    <script src="assets/js/fetchapi.js"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript CRUD</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+    <header class="site-header"><div class="header-overlay"><h1>Web programozás-1 Előadás Házi feladat</h1><p class="subtitle">JavaScript CRUD – Megyék kezelése tömbben tárolt adatokkal</p></div></header>
+    <nav><ul>
+        <li><a href="index.html">Főoldal</a></li><li><a href="javascript.html">JavaScript CRUD</a></li><li><a href="react.html">React CRUD</a></li><li><a href="spa.html">SPA</a></li><li><a href="fetchapi.html">Fetch API</a></li><li><a href="axios.html">Axios</a></li><li><a href="oojs.html">OOJS</a></li>
+    </ul></nav>
+    <main>
+        <section><h2>Megyék CRUD alkalmazás</h2><p>Ezen az oldalon a megyék adatait kizárólag kliensoldalon, egy JavaScript tömbben tároljuk.</p></section>
+        <section>
+            <h2>Új megye felvétele / rekord módosítása</h2>
+            <form id="county-form">
+                <input type="hidden" id="original-megyekod">
+                <label for="megyenev">Megye neve</label>
+                <input type="text" id="megyenev" maxlength="100" required>
+                <label for="regiokod">Régió</label>
+                <select id="regiokod" required>
+                    <option value="">Válassz régiót...</option>
+                </select>
+                <div class="button-group"><button type="submit">Mentés</button><button type="button" id="reset-btn">Űrlap ürítése</button></div>
+            </form>
+            <div id="message-box"></div>
+        </section>
+        <section>
+            <h2>Megyék listája</h2>
+            <div class="table-wrapper">
+                <table>
+                    <thead><tr><th>Megye neve</th><th>Régió</th><th>Műveletek</th></tr></thead>
+                    <tbody id="county-table-body"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <footer>Készítette: SAJÁT NÉV – NEPTUNKÓD | <span id="current-year"></span></footer>
+    <script src="assets/js/common.js"></script>
+    <script src="assets/js/javascript-crud.js"></script>
+</body>
+</html>

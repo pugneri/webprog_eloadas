@@ -29,8 +29,8 @@ Magyarországi foglalkoztatási és lakossági statisztikai webalkalmazás
 - foglalkozasok.txt
 
 ## Publikus elérés
-- Weboldal: IDE_JÖN_A_URL
-- GitHub: IDE_JÖN_A_REPO_URL
+- Weboldal: https://bravehearts.hu/webprog/
+- GitHub: https://github.com/pugneri/webprog_eloadas
 
 ## Megjegyzés
 A HTML oldalak láblécében a `SAJÁT NÉV – NEPTUNKÓD` szöveget a saját adataidra kell cserélni.

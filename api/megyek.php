@@ -1,8 +1,5 @@
 <?php
-declare(strict_types=1);
-
-header("Content-Type: application/json; charset=UTF-8");
-require_once __DIR__ . '/../include/config.inc.php';
+require_once "config.php";
 
 try {
     $stmt = $dbh->query("SELECT m.megyekod, m.megyenev, m.regiokod, r.regionev FROM megyek m LEFT JOIN regiok r ON m.regiokod = r.regiokod ORDER BY m.megyenev");

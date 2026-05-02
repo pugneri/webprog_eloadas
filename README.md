@@ -29,7 +29,7 @@ Magyarországi foglalkoztatási és lakossági statisztikai webalkalmazás
 - foglalkozasok.txt
 
 ## Publikus elérés
-- Weboldal: http://bravehearts.hu/webprog/
+- Weboldal: http://beadando.webprog260502.nhely.hu
 - GitHub: https://github.com/pugneri/webprog_eloadas
 
 ## Megjegyzés
